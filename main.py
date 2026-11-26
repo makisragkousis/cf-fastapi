@@ -4,6 +4,6 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.post("/")
-async def home():
+@app.get("/")
+async def hello():
     return {"message": "Hello, Coding Factory"}
