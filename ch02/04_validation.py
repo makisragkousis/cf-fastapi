@@ -14,7 +14,7 @@ async def read_item(
         q: Annotated[str | None, Query(
             min_length=3,
             max_length=10,
-            description="Query string")],
+            description="Query string")] = None,
 ):
     if item_id == 0:
         raise HTTPException(status_code=404, detail="Item not found")
